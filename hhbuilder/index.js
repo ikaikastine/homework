@@ -30,13 +30,13 @@ function validateData(event) {
 
   if (age == "") {
     alert("Age is required");
-    return false;
+    event.preventDefault();
   } else if (age <= 0) {
     alert("Age must be greater than 0");
-    return false;
+    event.preventDefault();
   } else if (relationship == "") {
     alert("Relationship is required");
-    return false;
+    event.preventDefault();
   } else {
     addToDOM(age, relationship, smoker);
     // Allows for DOM elements to persist after clicking add
